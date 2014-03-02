@@ -24,3 +24,12 @@
   font-size: 100px;
   text-align: center;
 }
+
+#man  {
+     
+     padding: 10px;
+     border: double black 1px;
+     display: block; 
+     margin-left: auto; 
+     margin-right: auto;
+}
