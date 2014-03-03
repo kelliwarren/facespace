@@ -23,6 +23,7 @@
 
   font-size: 100px;
   text-align: center;
+  padding-bottom: 25px;
 }
 
 #man  {
@@ -32,4 +33,11 @@
      display: block; 
      margin-left: auto; 
      margin-right: auto;
+}
+
+.brand {
+
+  padding-bottom: 20px;
+  text-align: center;
+
 }
