@@ -23,6 +23,7 @@ end
 
 group :development do
   gem "ffaker", "~> 1.23.0"
+  gem "letter_opener"
 end
 
 group :production do
