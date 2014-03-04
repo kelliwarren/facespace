@@ -7,6 +7,11 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail(to: @user.email, subject: 'Welcome to FaceSpace')
   end
+
+  def weekly_email(user)
+    @user = user
+    mail(to: @user.email, subject: 'Weekly Email')
+  end
 end
 
 #from, to, bcc, subject, cc -> can be passed
