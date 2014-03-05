@@ -7,4 +7,7 @@ Facespace::Application.routes.draw do
   # get '/thanks' => 'static#thanks'
   resources :users, only: [:index]
 
+  match '/contact' => "static#contact", via: [:get, :post] #search forms use get but use post when you send data
+
+
 end

@@ -1,0 +1,16 @@
+<h1 class="page-header">Contact Us</h1>
+<%= form_tag(contact_path) do %> 
+<div class="control-group">
+<%= text_field_tag(:name, '', placeholder: 'Name') %>
+</div>
+<div class="control-group">
+<%= email_field_tag(:email, '', placeholder: 'Email') %>
+</div>
+<div class="control-group">
+<%= text_area_tag(:question, '', placeholder: 'Question') %>
+</div>
+<div class="control-group">
+<%= submit_tag('Say Hi') %>
+</div>
+<% end %>
+
