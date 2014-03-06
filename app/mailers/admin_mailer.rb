@@ -7,4 +7,9 @@ class AdminMailer < ActionMailer::Base
     mail(subject: "New contact from submission")
 
   end
+
+  def newsletter_form(newsletter)
+    @newsletter = newsletter
+    mail(subject: "Newsletter Goodness")
+  end
 end

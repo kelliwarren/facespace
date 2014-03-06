@@ -8,11 +8,15 @@ class User < ActiveRecord::Base
   after_create :email_new_user 
 
 
+
+
   private
 
   def email_new_user
     UserMailer.welcome(self).deliver
   end
+
+  
   
 
 end

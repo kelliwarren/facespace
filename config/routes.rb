@@ -9,5 +9,5 @@ Facespace::Application.routes.draw do
 
   match '/contact' => "static#contact", via: [:get, :post] #search forms use get but use post when you send data
 
-
+  match '/newsletter' => "static#newsletter", via: [:get, :post]
 end
