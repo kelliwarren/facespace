@@ -14,4 +14,6 @@ class User < ActiveRecord::Base
     UserMailer.welcome(self).deliver
   end
   
+
 end
+

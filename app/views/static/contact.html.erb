@@ -1,16 +1,16 @@
 <h1 class="page-header">Contact Us</h1>
-<%= form_tag(contact_path) do %> 
+<%= form_for(@contact, url: contact_path) do |f| %> 
 <div class="control-group">
-<%= text_field_tag(:name, '', placeholder: 'Name') %>
+<%= f.text_field(:name, placeholder: 'Name') %>
 </div>
 <div class="control-group">
-<%= email_field_tag(:email, '', placeholder: 'Email') %>
+<%= f.email_field(:email, placeholder: 'Email') %>
 </div>
 <div class="control-group">
-<%= text_area_tag(:question, '', placeholder: 'Question') %>
+<%= f.text_area(:question, placeholder: 'Question') %>
 </div>
 <div class="control-group">
-<%= submit_tag('Say Hi') %>
+<%= f.submit('Say Hi') %>
 </div>
 <% end %>
 

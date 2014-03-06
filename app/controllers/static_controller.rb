@@ -10,11 +10,24 @@ class StaticController < ApplicationController
 
 
   def contact
+    @contact = Contact.new
     if request.post?
-    AdminMailer.contact_form(params).deliver
-    redirect_to contact_path, notice: "We will be with you never"
+      @contact.assign_attributes(contact_params)
+      if @contact.save
+        # AdminMailer.contact_form(params[:contact]).deliver
+        redirect_to contact_path, notice: "We will be with you never"
+    else
+      flash[:alert] = "oops"
+      render contact
     end
   end
+end
+
+private
+
+def contact_params
+  params.require(:contact).permit(:name, :email, :question)
+end
 
   # def thanks
   #   UserMailer.thanks(current_user).deliver
